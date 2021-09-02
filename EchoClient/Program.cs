@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace ClassDemo3CEchoApp
+namespace EchoClient
 {
     class Program
     {
         static void Main(string[] args)
         {
-            EchoWorker worker = new EchoWorker();
+            ClientWorker worker = new ClientWorker();
             worker.Start();
 
             Console.ReadLine();

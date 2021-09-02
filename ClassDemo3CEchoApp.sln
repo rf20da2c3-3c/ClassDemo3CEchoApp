@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassDemo3CEchoApp", "ClassDemo3CEchoApp\ClassDemo3CEchoApp.csproj", "{13C5070D-95CA-4488-B3FF-6416688E20C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassDemo3CEchoApp", "ClassDemo3CEchoApp\ClassDemo3CEchoApp.csproj", "{13C5070D-95CA-4488-B3FF-6416688E20C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoClient", "EchoClient\EchoClient.csproj", "{62E4B11D-94B2-4BF6-9C80-6B3ECFED87DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{13C5070D-95CA-4488-B3FF-6416688E20C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13C5070D-95CA-4488-B3FF-6416688E20C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13C5070D-95CA-4488-B3FF-6416688E20C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E4B11D-94B2-4BF6-9C80-6B3ECFED87DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E4B11D-94B2-4BF6-9C80-6B3ECFED87DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E4B11D-94B2-4BF6-9C80-6B3ECFED87DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E4B11D-94B2-4BF6-9C80-6B3ECFED87DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
