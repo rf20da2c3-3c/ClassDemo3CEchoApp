@@ -12,7 +12,7 @@ namespace EchoClient
 
         public void Start()
         {
-            TcpClient socket = new TcpClient("localhost", 7777);
+            TcpClient socket = new TcpClient("localhost", 7);
 
             using (StreamReader sr = new StreamReader(socket.GetStream()))
             using (StreamWriter sw = new StreamWriter(socket.GetStream()))
@@ -25,7 +25,7 @@ namespace EchoClient
                 sw.Flush();
 
                 String str = sr.ReadLine();
-                Console.WriteLine("Server har svaret : " + str);
+                Console.WriteLine("Server svar: " + str);
 
                 
             }

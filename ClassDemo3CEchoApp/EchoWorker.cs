@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 
 namespace ClassDemo3CEchoApp
 {
@@ -12,12 +13,24 @@ namespace ClassDemo3CEchoApp
 
         public void Start()
         {
-            TcpListener listener = new TcpListener(7777);
+            TcpListener listener = new TcpListener(7);
             listener.Start();
+            {
+                while (true) // kan håndterer flere klienter
+                {
+                    TcpClient socket = listener.AcceptTcpClient();
 
-            TcpClient socket = listener.AcceptTcpClient();
+                    Task.Run(  // håndterer flere klienter samtidigt
+                        () => { DoClient(socket); }
+                    );
+                }
 
-            using(StreamReader sr = new StreamReader(socket.GetStream()))
+            }
+        }
+
+        private void DoClient(TcpClient socket)
+        {
+            using (StreamReader sr = new StreamReader(socket.GetStream()))
             using (StreamWriter sw = new StreamWriter(socket.GetStream()))
             {
                 String str = sr.ReadLine();
@@ -27,6 +40,7 @@ namespace ClassDemo3CEchoApp
                 sw.Flush();
             }
 
+            socket?.Close();
         }
     }
 }
